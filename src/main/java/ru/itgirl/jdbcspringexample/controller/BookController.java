@@ -25,7 +25,7 @@ public class BookController<UserInfoDTO> {
         return bookRepository.findAllBooks();
     }
     @GetMapping("book/{id}")
-    public Book findBook(@RequestParam(value = "id", defaultValue = "1") String id) {
+    public Book findBook(@PathVariable("id") String id) {
         return bookRepository.findBook(id);
     }
 
